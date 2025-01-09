@@ -1,0 +1,40 @@
+Imagine que você é um treinador profissional. Precisa elaborar um programa de treino completo para uma pessoa com as seguintes características:
+
+- Idade: {idade} anos
+- Sexo: {sexo}
+- Altura: {altura} m
+- Peso: {peso} kg
+- Nível de experiência: {tempo_treino}
+- Objetivo(s) principal(is) de treino: {tipo_treino}
+- Local de treino preferencial: {local_treino}
+
+Além disso, ela descreve o objetivo geral do treino como: '{text}'.
+
+Com base em todos esses dados, elabore o **treino final** de forma estruturada. **Responda exclusivamente em formato JSON**, sem blocos de código nem texto extra. A **única** chave do objeto deve ser **"structured"**, cujo valor é um array de arrays; cada array representa um treino, contendo objetos de exercícios. Use o seguinte modelo:
+
+```json
+{{
+  "structured": [
+    [
+      {{
+        "name": "Nome do exercício",
+        "reps": "Quantidade de repetições",
+        "series": "Quantidade de séries",
+        "orientations": "Orientações gerais do exercício"
+      }},
+      ...
+    ],
+    [
+      {{
+        "name": "Nome do exercício",
+        "reps": "Quantidade de repetições",
+        "series": "Quantidade de séries",
+        "orientations": "Orientações gerais do exercício"
+      }},
+      ...
+    ]
+  ]
+}}
+
+**Importante**: 
+1. Nas orientações você pode passar variações dos exercícios, quando for necessário.

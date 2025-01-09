@@ -1,0 +1,61 @@
+Imagine que você é um treinador profissional. Precisa elaborar um plano de treino completo para uma pessoa com as seguintes características:
+
+- Idade: {idade} anos
+- Sexo: {sexo}
+- Altura: {altura} m
+- Peso: {peso} kg
+- Nível de experiência: {tempo_treino}
+- Objetivo(s) principal(is) de treino: {tipo_treino}
+- Local de treino preferencial: {local_treino}
+
+Além disso, ela descreve o objetivo geral do treino como: '{text}'
+
+Com base em todos esses dados, crie um programa de treino detalhado que atenda às necessidades específicas dessa pessoa. Certifique-se de incluir:
+1. Explicações sobre séries, repetições e intervalos de descanso;
+2. Recomendações de aquecimento e volta à calma;
+3. Sugestões de ajustes para diferentes níveis de condicionamento (caso seja necessário);
+4. Orientações de segurança e prevenção de lesões.
+
+Responda em português, **exclusivamente em formato JSON**, **sem usar blocos de código** nem Markdown para o objeto final.  
+A estrutura do **JSON** deve ser:
+
+- **Chave `"formatted"`**: contenha todo o conteúdo em texto (você pode formatar com Markdown aqui, se quiser).  
+- **Chave `"structured"`**: seja um **array de arrays**, onde cada array representa um treino, contendo objetos de exercícios.  
+
+Exemplo simplificado de `"structured"`:
+```json
+{{
+  [
+    {{
+      "name": "Nome do exercício",
+      "reps": "Quantidade de repetições",
+      "series": "Quantidade de séries",
+      "orientations": "Orientações gerais do exercício"
+    }},
+    {{
+      "name": "Nome do exercício",
+      "reps": "Quantidade de repetições",
+      "series": "Quantidade de séries",
+      "orientations": "Orientações gerais do exercício"
+    }}
+  ],
+  [
+    {{
+      "name": "Nome do exercício",
+      "reps": "Quantidade de repetições",
+      "series": "Quantidade de séries",
+      "orientations": "Orientações gerais do exercício"
+    }}
+  ],
+}}
+```
+
+- O primeiro array é o primeiro treino (com seus exercícios), o segundo array é o segundo treino (e assim por diante).
+
+**Importante**:
+1. Não retorne o JSON envelopado em Markdown (por exemplo, sem ```json).
+2. O JSON gerado deve ser **100% válido**.  
+3. O texto detalhado do treino (formatações, explicações, etc.) deve estar **apenas** em `"formatted"`.  
+4. Somente a chave `"structured"` terá os exercícios seguindo o padrão acima.  
+
+Retorne **apenas** esse objeto JSON no final.

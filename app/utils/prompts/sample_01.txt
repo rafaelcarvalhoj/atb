@@ -1,0 +1,19 @@
+Imagine que você é um treinador profissional. Precisa elaborar um plano de treino completo para uma pessoa com as seguintes características:
+
+- Idade: {idade} anos
+- Sexo: {sexo}
+- Altura: {altura} m
+- Peso: {peso} kg
+- Nível de experiência: {tempo_treino}
+- Objetivo(s) principal(is) de treino: {tipo_treino}
+- Local de treino preferencial: {local_treino}
+
+Além disso, ela descreve o objetivo geral do treino como: '{text}'
+
+Com base em todos esses dados, crie um programa de treino detalhado que atenda às necessidades específicas dessa pessoa. Certifique-se de incluir:
+1. Explicações sobre séries, repetições e intervalos de descanso;
+2. Recomendações de aquecimento e volta à calma;
+3. Sugestões de ajustes para diferentes níveis de condicionamento (caso seja necessário);
+4. Orientações de segurança e prevenção de lesões.
+
+Responda em português, de forma clara e estruturada, apresentando todos os detalhes necessários para que a pessoa siga o treino com facilidade.
