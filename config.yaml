@@ -1,0 +1,136 @@
+cookie:
+  expiry_days: 30
+  key: unicorn
+  name: ATB
+credentials:
+  usernames:
+    admin:
+      email: rrafaelcarvalhoj@gmail.com
+      first_name: Rafael
+      last_name: Carvalho
+      logged_in: False
+      password: !ENV ADMIN_PASSWORD
+      roles:
+        - admin
+        - personal
+        - viwer
+
+    !ENV USER_01_USERNAME:
+      email: !ENV USER_01_EMAIL
+      first_name: !ENV USER_01_FIRSTNAME
+      last_name: !ENV USER_01_LASTNAME
+      password: !ENV USER_01_PASSWORD
+
+    !ENV USER_02_USERNAME:
+      email: !ENV USER_02_EMAIL
+      first_name: !ENV USER_02_FIRSTNAME
+      last_name: !ENV USER_02_LASTNAME
+      password: !ENV USER_02_PASSWORD
+
+    !ENV USER_03_USERNAME:
+      email: !ENV USER_03_EMAIL
+      first_name: !ENV USER_03_FIRSTNAME
+      last_name: !ENV USER_03_LASTNAME
+      password: !ENV USER_03_PASSWORD
+
+    !ENV USER_04_USERNAME:
+      email: !ENV USER_04_EMAIL
+      first_name: !ENV USER_04_FIRSTNAME
+      last_name: !ENV USER_04_LASTNAME
+      password: !ENV USER_04_PASSWORD
+
+    !ENV USER_05_USERNAME:
+      email: !ENV USER_05_EMAIL
+      first_name: !ENV USER_05_FIRSTNAME
+      last_name: !ENV USER_05_LASTNAME
+      password: !ENV USER_05_PASSWORD
+
+    !ENV USER_06_USERNAME:
+      email: !ENV USER_06_EMAIL
+      first_name: !ENV USER_06_FIRSTNAME
+      last_name: !ENV USER_06_LASTNAME
+      password: !ENV USER_06_PASSWORD
+
+    !ENV USER_07_USERNAME:
+      email: !ENV USER_07_EMAIL
+      first_name: !ENV USER_07_FIRSTNAME
+      last_name: !ENV USER_07_LASTNAME
+      password: !ENV USER_07_PASSWORD
+
+    !ENV USER_08_USERNAME:
+      email: !ENV USER_08_EMAIL
+      first_name: !ENV USER_08_FIRSTNAME
+      last_name: !ENV USER_08_LASTNAME
+      password: !ENV USER_08_PASSWORD
+
+    !ENV USER_09_USERNAME:
+      email: !ENV USER_09_EMAIL
+      first_name: !ENV USER_09_FIRSTNAME
+      last_name: !ENV USER_09_LASTNAME
+      password: !ENV USER_09_PASSWORD
+
+    !ENV USER_10_USERNAME:
+      email: !ENV USER_10_EMAIL
+      first_name: !ENV USER_10_FIRSTNAME
+      last_name: !ENV USER_10_LASTNAME
+      password: !ENV USER_10_PASSWORD
+
+    !ENV USER_11_USERNAME:
+      email: !ENV USER_11_EMAIL
+      first_name: !ENV USER_11_FIRSTNAME
+      last_name: !ENV USER_11_LASTNAME
+      password: !ENV USER_11_PASSWORD
+
+    !ENV USER_12_USERNAME:
+      email: !ENV USER_12_EMAIL
+      first_name: !ENV USER_12_FIRSTNAME
+      last_name: !ENV USER_12_LASTNAME
+      password: !ENV USER_12_PASSWORD
+
+    !ENV USER_13_USERNAME:
+      email: !ENV USER_13_EMAIL
+      first_name: !ENV USER_13_FIRSTNAME
+      last_name: !ENV USER_13_LASTNAME
+      password: !ENV USER_13_PASSWORD
+
+    !ENV USER_14_USERNAME:
+      email: !ENV USER_14_EMAIL
+      first_name: !ENV USER_14_FIRSTNAME
+      last_name: !ENV USER_14_LASTNAME
+      password: !ENV USER_14_PASSWORD
+
+    !ENV USER_15_USERNAME:
+      email: !ENV USER_15_EMAIL
+      first_name: !ENV USER_15_FIRSTNAME
+      last_name: !ENV USER_15_LASTNAME
+      password: !ENV USER_15_PASSWORD
+
+    !ENV USER_16_USERNAME:
+      email: !ENV USER_16_EMAIL
+      first_name: !ENV USER_16_FIRSTNAME
+      last_name: !ENV USER_16_LASTNAME
+      password: !ENV USER_16_PASSWORD
+
+    !ENV USER_17_USERNAME:
+      email: !ENV USER_17_EMAIL
+      first_name: !ENV USER_17_FIRSTNAME
+      last_name: !ENV USER_17_LASTNAME
+      password: !ENV USER_17_PASSWORD
+
+    !ENV USER_18_USERNAME:
+      email: !ENV USER_18_EMAIL
+      first_name: !ENV USER_18_FIRSTNAME
+      last_name: !ENV USER_18_LASTNAME
+      password: !ENV USER_18_PASSWORD
+
+    !ENV USER_19_USERNAME:
+      email: !ENV USER_19_EMAIL
+      first_name: !ENV USER_19_FIRSTNAME
+      last_name: !ENV USER_19_LASTNAME
+      password: !ENV USER_19_PASSWORD
+
+    !ENV USER_20_USERNAME:
+      email: !ENV USER_20_EMAIL
+      first_name: !ENV USER_20_FIRSTNAME
+      last_name: !ENV USER_20_LASTNAME
+      password: !ENV USER_20_PASSWORD
