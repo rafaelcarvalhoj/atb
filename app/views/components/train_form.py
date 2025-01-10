@@ -22,6 +22,8 @@ muscle_groups = {
     }
 }
 
+popular_muscle_groups = ["Peito","Costas","Ombros","Bíceps","Tríceps","Antebraço","Abdômen","Lombar","Trapézio","Glúteos","Quadríceps","Isquiotibiais","Posterior de Coxa""Adutores","Panturrilhas"]
+
 class TrainForm:
     def __init__(self, form_id: str, title: str = "Treino", callback = None):
         self.__form_id = form_id
@@ -99,7 +101,7 @@ class TrainForm:
             grupo_muscular = st.multiselect(
                 "Grupos Musculares",
                 placeholder="Selecione os grupos musculares desejados",
-                options=all_muscles,
+                options=popular_muscle_groups,
                 help="Use a barra de busca para encontrar facilmente os músculos desejados."
             )
             
