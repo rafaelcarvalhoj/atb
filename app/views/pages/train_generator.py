@@ -43,16 +43,39 @@ class TrainGeneratorPage:
             self.__train_form.display()
                 
         elif st.session_state.current_tab == 3:
-            st.header("Etapa 3: Resumo dos dados")
+            st.header("Etapa 3:  Revisão e Geração do Treino")
             if st.session_state.user_data and st.session_state.user_train:
-                st.subheader("Informações do Treino:")
-                st.markdown(f"**Treino:**")
-                st.json(st.session_state.user_train)
-                
-                st.subheader("Informações do Aluno:")
-                st.markdown(f"**Aluno:**")
-                st.json(st.session_state.user_data)
-                if st.button("💡Gerar Treino"):
+                st.title("Resumo do Treino")
+                st.markdown("### Informações Gerais do Treino")
+                st.markdown(f"- **Tempo de Treino:** {st.session_state.user_train['tempo_treino']}")
+                st.markdown(f"- **Intensidade do Treino:** {st.session_state.user_train['intensidade_treino']}")
+                st.markdown(f"- **Duração do Treino:** {st.session_state.user_train['duracao_treino']}")
+                st.markdown(f"- **Local de Treino:** {st.session_state.user_train['local_treino']}")
+                st.markdown(f"- **Quantidade Média de Exercícios:** {st.session_state.user_train['quantidade_media_exercicios']}")
+                st.markdown(f"- **Descrição do Treino:** {st.session_state.user_train['descricao_treino'] or 'Não fornecida'}")
+                st.markdown("### Tipos de Treino")
+                if st.session_state.user_train["tipo_treino"]:
+                    for t in st.session_state.user_train["tipo_treino"]:
+                        st.markdown(f"- {t}")
+                else:
+                    st.markdown("- Nenhum tipo de treino selecionado")
+
+                st.markdown("### Grupos Musculares Focados")
+                if st.session_state.user_train["grupo_muscular"]:
+                    for gm in st.session_state.user_train["grupo_muscular"]:
+                        st.markdown(f"- {gm}")
+                else:
+                    st.markdown("- Nenhum grupo muscular selecionado")                
+
+                st.title("Informações do Aluno")
+                st.markdown("### Detalhes do Aluno")
+                st.markdown(f"- **Idade:** {st.session_state.user_data['idade']} anos")
+                st.markdown(f"- **Altura:** {st.session_state.user_data['altura']} m")
+                st.markdown(f"- **Peso:** {st.session_state.user_data['peso']} kg")
+                st.markdown(f"- **Sexo:** {st.session_state.user_data['sexo']}")
+                st.markdown(f"- **Observações:** {st.session_state.user_data['observacoes'] or 'Não fornecido'}")
+                        
+                if st.button("💡 Gerar Treino"):
                     print("gerando treino...")
                     prompt = ""
                     with open("./app/utils/prompts/sample_04.txt", "r") as f:
@@ -84,7 +107,11 @@ class TrainGeneratorPage:
                                 ])
                             st.table(pd.DataFrame(train_data, columns=columns))
                             st.divider()
+                                
                     except Exception as e:
-                        st.error(f"Ocorreu um erro ao processar a resposta: {e}")
+                        st.error(f"Ocorreu um erro ao processar a resposta. Por favor procurar o Rafael Carvalho.")
+                if st.button("⭐ Novo Protocolo"):
+                    st.session_state.current_tab = 1
+                    st.rerun()
             else:
                 st.error("Dados insuficientes.")
