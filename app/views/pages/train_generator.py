@@ -14,12 +14,18 @@ class TrainGeneratorPage:
             st.session_state.user_data = None
         if 'user_train' not in st.session_state:
             st.session_state.user_train = None
+        if 'current_tab' not in st.session_state:
+            st.session_state.current_tab = 1
 
     def append_user_train(self, **kwargs):
         st.session_state['user_train'] = dict(kwargs)
+        st.session_state.current_tab = 3
+        st.rerun()
         
     def append_user_data(self, **kwargs):
         st.session_state['user_data'] = dict(kwargs)
+        st.session_state.current_tab = 2
+        st.rerun()
 
     def __generate_response(self, input_text):
         model_response = self.__llm_service.invoke(input_text) 
@@ -28,17 +34,15 @@ class TrainGeneratorPage:
     def display(self):
         st.title("🦜 Automated Training Build App")
 
-        tabs = st.tabs(["1. Anamnese", "2. Preencher Treino", "3. Resumo"])
-        
-        with tabs[0]:
+        if st.session_state.current_tab == 1:
             st.header("Etapa 1: Preencha a Anamnese")
             self.__anamnese_form.display()
         
-        with tabs[1]:
+        elif st.session_state.current_tab == 2:
             st.header("Etapa 2: Preencha os Detalhes do Treino")
             self.__train_form.display()
                 
-        with tabs[2]:
+        elif st.session_state.current_tab == 3:
             st.header("Etapa 3: Resumo dos dados")
             if st.session_state.user_data and st.session_state.user_train:
                 st.subheader("Informações do Treino:")
