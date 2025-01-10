@@ -105,13 +105,13 @@ class TrainForm:
             
             descricao_treino = st.text_area("**Dê uma descrição geral do treino**")            
             
-            submitted = st.form_submit_button("Salvar Treino")
+            submitted = st.form_submit_button("➡️ Próximo")
                                         
             if submitted:
                 form_data = {
                     'tempo_treino': tempo_treino,
                     'intensidade_treino': intensidade,
-                    'duracao_treino': f"{duracao_horas} horas e {duracao_minutos} minutos",
+                    'duracao_treino': f"{duracao_horas} hora e {duracao_minutos} minutos",
                     'tipo_treino': tipo_treino,
                     'local_treino': local_treino,
                     'grupo_muscular': grupo_muscular,

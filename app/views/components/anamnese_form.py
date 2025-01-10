@@ -19,7 +19,7 @@ class AnamneseForm:
                 placeholder="Descreva observações médicas, lesões, dores, histórico hospitalar e etc."
                 )
 
-            submitted = st.form_submit_button("Salvar")
+            submitted = st.form_submit_button("➡️ Próximo")
             
             if submitted:
                 form_data = {
