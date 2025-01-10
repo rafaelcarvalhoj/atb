@@ -12,7 +12,7 @@ class AnamneseForm:
             form_2c_left, form_2c_right = st.columns(2)
             idade = form_2c_left.number_input("Idade", step = 1, value=20)
             altura = form_2c_left.number_input("Altura", 1.0, 2.5, value=1.70)
-            peso = form_2c_right.slider("Peso (kg)", 30.0, 150.0, 75.0)
+            peso = form_2c_right.number_input("Peso (kg)", 30.0, 180.0, 75.0, 1.0)
             sexo = form_2c_right.radio("Sexo", options=["Homem", "Mulher"])
             observacoes = st.text_area(
                 "Observações", 

@@ -55,8 +55,8 @@ class TrainForm:
                 )
             with col2:
                 st.write("**Duração do Treino**")
-                duracao_horas = st.slider("Horas", 0, 5, 1)
-                duracao_minutos = st.slider("Minutos", 0, 59, 30)
+                duracao_horas = st.number_input("Horas", 0, 5, 1, 1)
+                duracao_minutos = st.number_input("Minutos", 0, 59, 30, 1)
                 
             tipo_treino = st.multiselect(
                 "Tipo de Treino", 
